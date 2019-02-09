@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
+              <a class="nav-link" href="index.html">Главная страница</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">Обо мне</a>
@@ -52,14 +52,16 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Блог филолога-исследователя</h1>
-              <span class="subheading">Digital humanities в филологии
+            <div class="page-heading">
+              <h1>Напишите мне</h1>
+              <span class="subheading">Возникли вопросы? У меня есть ответы.</span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -68,35 +70,38 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-              <h3 class="post-title">
-          Как современные технологии могут помочь филологу?
-            </h3>
-          <p>Новые технологии активно проникают в сферу гуманитарных наук и, в частности, в пространство филологических исследований. Важнейшее достижение такого союза для филологии - это, прежде всего, оцифровка текста, способствующая сохранению важных печатных источников в электронном виде. Она также делает более быстрым доступ к огромному пласту информации, которая теперь находится в едином электронном пространстве. Кроме того, применение к текстам точных методов значительно упрощается, в том числе засчёт возможности машинного подсчёта нужных исследователю параметров. </p>
-          <img class="img-fluid" src="img/dm.jpg" alt="">
-    </div>
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Какие сайты предлагают современному филологу?
-              </h2>
-              <h3 class="post-subtitle">
-                Разбираем достоинства и недостатки интерфейса сайтов, с которыми наиболее часто приходится взаимодействовать.  
-              </h3>
-            </a>
-            <p class="post-meta">
-              Февраль 2, 2019</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Другие посты &rarr;</a>
-          </div>
+          <p>У вас есть вопросы или предложения, хотите обсудить исследование или поделиться своими наблюдениями? Заполните анкету ниже,чтобы отправить мне сообщение, и я отвечу вам, как только смогу!</p>
+          <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+          <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+          <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Имя</label>
+                <input type="text" class="form-control" placeholder="Имя" id="name" required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Электронная почта</label>
+                <input type="email" class="form-control" placeholder="Электронная почта" id="email" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Сообщение</label>
+                <textarea rows="5" class="form-control" placeholder="Сообщение" id="message" required data-validation-required-message="Пожалуйста, введите сообщение"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -112,7 +117,7 @@
               <li class="list-inline-item">
                 <a href="https://vk.com/ladamolokova">
                   <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"> </i>
+                    <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-vk fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
@@ -143,6 +148,10 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
